@@ -1,6 +1,6 @@
 # Incorporação do frontend HidroFlorestas
 
-Entrega local em 2026-10-09, branch `feat/incorporacao-frontend-hidroflorestas`. Destino único para alterações: `HidroFlorestaStartup/hidroflorestas-frontend-starter`. Sem push, PR, merge ou deploy. Protótipo de demonstração; integração posterior.
+Entrega local em 2026-10-09, branch `feat/incorporacao-frontend-hidroflorestas`. Destino único para alterações: `HidroFlorestaStartup/hidroflorestas-frontend-starter`. Na conclusão dessa etapa local, ainda não havia push, PR, merge ou deploy. Protótipo de demonstração; integração posterior.
 
 ## Proveniência e estado inicial
 
@@ -79,3 +79,9 @@ Os checks de browser aguardam hidratação e consultas; não consideram build ou
 - Corrigida a grade implícita do workspace que excedia 375px em 52px; nomes de laboratórios agora quebram linha. Sair passou ao cabeçalho desktop.
 - As primeiras rodadas do browser corrigiram seletores de teste/hidratação e detectaram a grade móvel. Uma atualização HMR durante teste invalidou um módulo dinâmico; a rodada final usou build estável, sem edições concorrentes.
 - As três referências permaneceram com branches, SHAs, remotes e status iniciais. Hashes dos 115/117/772 arquivos não gerados conferidos após a retomada: [integridade-referencias.json](validacao/integridade-referencias.json). A fotografia de checksums anterior à interrupção estava em /tmp e foi perdida; a confirmação inicial de Git limpo permaneceu registrada na sessão. A nova leitura final dos remotes também confirmou os mesmos SHAs, sem atualizações remotas: [estado-remoto-final.json](validacao/estado-remoto-final.json).
+
+## Conferência anterior à publicação
+
+Em 2026-10-09, a publicação foi autorizada para `feat/incorporacao-frontend-hidroflorestas` → `main`, exclusivamente no starter. O fetch confirmou `origin/main` em `8984bb80a29973c05a5830cb624c60df6ed5d575`, sem divergência da base validada. Foram reconfirmados os commits `b9f82f371575633fbbbe5774d2fcb46c8746e374` e `d7bee822951e8e60e6746d2d1e5ac7fddff185fc`, a árvore limpa e a ausência de alterações em AGENTS.md/.lovable. A inspeção de caminhos e padrões de credenciais no diff não encontrou arquivos locais indevidos nem segredos reconhecíveis.
+
+Os logs e relatórios acima foram conferidos; os testes e builds são evidências da etapa anterior, sem nova execução nesta conferência. `git diff --check` identificou apenas linhas vazias finais em dois logs versionados, removidas sem alterar seus resultados. O texto do README e deste relatório foi esclarecido para distinguir a entrega local da etapa de publicação. Nenhum código, dependência ou configuração de aplicação mudou; não foi necessário repetir os checks de execução.

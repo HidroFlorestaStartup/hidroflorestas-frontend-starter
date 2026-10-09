@@ -76,4 +76,4 @@ Mapas têm atribuição OpenStreetMap e lista/coordenadas alternativas quando ti
 
 A integração futura exige adaptação ao Next.js App Router, aos cookies HttpOnly, à autorização e aos contratos reais. Verificação de e-mail, recuperação/troca de senha e exclusão da própria conta já avançaram no FullStack e estão documentadas como trabalho posterior.
 
-Consulte o [relatório da incorporação](docs/incorporacao-frontend-hidroflorestas.md), o [plano](docs/plano-incorporacao-frontend.md) e as [evidências](docs/validacao). Preserve `.lovable`, o remote e o histórico publicado. Esta entrega é local, sem push ou deploy.
+Consulte o [relatório da incorporação](docs/incorporacao-frontend-hidroflorestas.md), o [plano](docs/plano-incorporacao-frontend.md) e as [evidências](docs/validacao). Preserve `.lovable`, o remote e o histórico publicado. A incorporação foi validada localmente; publicação da branch e revisão por Pull Request constituem uma etapa posterior.
