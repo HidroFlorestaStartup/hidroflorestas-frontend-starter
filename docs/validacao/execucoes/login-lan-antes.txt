@@ -1,0 +1,104 @@
+{
+  "name": "chromium",
+  "host": "192.168.18.72",
+  "errors": [
+    "TypeError: crypto.randomUUID is not a function\n    at uid (http://192.168.18.72:8080/src/adapter/mock.ts:15:26)\n    at http://192.168.18.72:8080/src/adapter/mock.ts:42:6"
+  ],
+  "events": [],
+  "buttons": [
+    {
+      "text": " Demonstração",
+      "disabled": true
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": " Entrar",
+      "disabled": true
+    },
+    {
+      "text": "Proprietário (OWNER) — Luciano",
+      "disabled": true
+    },
+    {
+      "text": "Admin. do laboratório — Pedro",
+      "disabled": true
+    },
+    {
+      "text": "Membro (MEMBER) — Ana",
+      "disabled": true
+    },
+    {
+      "text": "Admin. global — Carla",
+      "disabled": true
+    },
+    {
+      "text": "Conta sem laboratório — Marcos",
+      "disabled": true
+    },
+    {
+      "text": "Limite de 5 laboratórios — Júlia",
+      "disabled": true
+    }
+  ],
+  "scripts": [
+    {
+      "src": "http://192.168.18.72:8080/@id/virtual:tanstack-start-dev-client-entry",
+      "type": "module"
+    }
+  ]
+}
+{
+  "name": "firefox",
+  "host": "192.168.18.72",
+  "errors": [
+    "TypeError: crypto.randomUUID is not a function\n    at uid (http://192.168.18.72:8080/src/adapter/mock.ts:15:26)\n    at  (http://192.168.18.72:8080/src/adapter/mock.ts:42:6)"
+  ],
+  "events": [],
+  "buttons": [
+    {
+      "text": " Demonstração",
+      "disabled": true
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": " Entrar",
+      "disabled": true
+    },
+    {
+      "text": "Proprietário (OWNER) — Luciano",
+      "disabled": true
+    },
+    {
+      "text": "Admin. do laboratório — Pedro",
+      "disabled": true
+    },
+    {
+      "text": "Membro (MEMBER) — Ana",
+      "disabled": true
+    },
+    {
+      "text": "Admin. global — Carla",
+      "disabled": true
+    },
+    {
+      "text": "Conta sem laboratório — Marcos",
+      "disabled": true
+    },
+    {
+      "text": "Limite de 5 laboratórios — Júlia",
+      "disabled": true
+    }
+  ],
+  "scripts": [
+    {
+      "src": "http://192.168.18.72:8080/@id/virtual:tanstack-start-dev-client-entry",
+      "type": "module"
+    }
+  ]
+}

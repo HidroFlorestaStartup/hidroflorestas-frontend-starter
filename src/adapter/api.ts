@@ -1,5 +1,6 @@
 // Interface do adapter. A implementação real usará fetch com `credentials: "include"` e `cache: "no-store"`
 // contra os endpoints existentes; a demonstração usa `mock.ts`.
+import { randomUuid } from "@/lib/random-uuid";
 import type {
   AdminUser,
   AccountStatus,
@@ -177,4 +178,4 @@ export interface HidroApi {
   ): Promise<{ items: AuditEvent[]; nextCursor: string | null }>;
 }
 
-export const newIdempotencyKey = () => crypto.randomUUID();
+export const newIdempotencyKey = randomUuid;

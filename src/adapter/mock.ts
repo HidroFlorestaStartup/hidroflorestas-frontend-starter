@@ -21,6 +21,7 @@ import type {
 } from "@/domain/types";
 import { getScenario, setScenario } from "@/demo/scenario";
 import { ApiError, type HidroApi } from "./api";
+import { randomUuid } from "@/lib/random-uuid";
 
 const DAY = 86400000;
 const ago = (days: number, h = 0) => new Date(Date.now() - days * DAY - h * 3600000).toISOString();
@@ -31,7 +32,7 @@ const withOffset = (iso: string, offMin = -180) => {
   const a = Math.abs(offMin);
   return `${d.toISOString().slice(0, 23)}${sign}${String(Math.floor(a / 60)).padStart(2, "0")}:${String(a % 60).padStart(2, "0")}`;
 };
-const uid = () => crypto.randomUUID();
+const uid = randomUuid;
 
 // ---------------- Pessoas ----------------
 type DbUser = AdminUser;

@@ -1,0 +1,26 @@
+OK 1440px: contas aguardam o módulo de hidratação
+OK 1440px: clique nas seis contas preenche sem iniciar sessão
+OK 1440px: conta bloqueada rejeitada, seleção corrige o erro
+OK 1440px: Tab e Enter, ana, login só com Entrar
+OK 1440px: Tab e Space, carla, login só com Entrar
+OK 375px: contas aguardam o módulo de hidratação
+OK 375px: clique nas seis contas preenche sem iniciar sessão
+OK 375px: conta bloqueada rejeitada, seleção corrige o erro
+OK 375px: Tab e Enter, ana, login só com Entrar
+OK 375px: Tab e Space, carla, login só com Entrar
+{
+  "checks": [
+    "1440px: contas aguardam o módulo de hidratação",
+    "1440px: clique nas seis contas preenche sem iniciar sessão",
+    "1440px: conta bloqueada rejeitada, seleção corrige o erro",
+    "1440px: Tab e Enter, ana, login só com Entrar",
+    "1440px: Tab e Space, carla, login só com Entrar",
+    "375px: contas aguardam o módulo de hidratação",
+    "375px: clique nas seis contas preenche sem iniciar sessão",
+    "375px: conta bloqueada rejeitada, seleção corrige o erro",
+    "375px: Tab e Enter, ana, login só com Entrar",
+    "375px: Tab e Space, carla, login só com Entrar"
+  ],
+  "runtimeErrors": [],
+  "moduleFailures": []
+}
