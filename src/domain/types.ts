@@ -76,12 +76,7 @@ export interface Collection {
 
 // --- Dados ambientais (ihfr-measurement-v1) ---
 export type WaterSourceType =
-  | "RIVER_STREAM"
-  | "SPRING"
-  | "SHALLOW_WELL"
-  | "TUBULAR_WELL"
-  | "CISTERN"
-  | "OTHER";
+  "RIVER_STREAM" | "SPRING" | "SHALLOW_WELL" | "TUBULAR_WELL" | "CISTERN" | "OTHER";
 export type WaterAvailability = "PERMANENT" | "SEASONAL" | "SCARCE";
 export type SalinityIndicator = "NONE" | "SUSPECTED" | "CONFIRMED";
 export type SoilTexture = "SANDY" | "MEDIUM" | "CLAYEY";
@@ -145,13 +140,7 @@ export interface TerritorialArea {
 
 // --- IHFR ---
 export type LandUseType =
-  | "FOREST"
-  | "AGROFORESTRY"
-  | "CROPLAND"
-  | "PASTURE"
-  | "DEGRADED_PASTURE"
-  | "BARE_SOIL"
-  | "URBAN";
+  "FOREST" | "AGROFORESTRY" | "CROPLAND" | "PASTURE" | "DEGRADED_PASTURE" | "BARE_SOIL" | "URBAN";
 export type ProvenanceKind = "FIELD_OBSERVATION" | "AUTHORIZED_RECORD";
 export type LifecycleState = "CURRENT" | "SUPERSEDED" | "REVOKED";
 export type IhfrClass = "LOW" | "MODERATE" | "HIGH" | "CRITICAL";
@@ -183,7 +172,15 @@ export interface PublicDiagnosis {
   ihfrClass: IhfrClass;
   dataQuality: DataQuality;
   componentScores: { W: number; S: number; V: number; T: number };
-  decomposition: Record<string, unknown>;
+  decomposition: ReadonlyArray<{
+    input: string;
+    available: boolean;
+    raw: number | string | boolean | null;
+    normalizedInput: number | string | boolean | null;
+    transformation: string | null;
+    score: number | null;
+    clamped: boolean;
+  }>;
   drivers: ("W" | "S" | "V" | "T")[];
   explanation: string;
   versions: ContractVersions;

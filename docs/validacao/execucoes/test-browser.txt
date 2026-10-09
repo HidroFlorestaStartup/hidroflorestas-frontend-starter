@@ -1,0 +1,24 @@
+RUN Acesso, validação e seleção explícita de laboratório
+OK Acesso, validação e seleção explícita de laboratório
+RUN Área: validação, UF livre, geolocalização tardia, revisão e consulta
+OK Área: validação, UF livre, geolocalização tardia, revisão e consulta
+RUN Coleta: offset manual, milissegundos, correção e confirmação
+OK Coleta: offset manual, milissegundos, correção e confirmação
+RUN Medições: null, zero, false, declividade 150%, revisão e falha recuperável
+OK Medições: null, zero, false, declividade 150%, revisão e falha recuperável
+RUN IHFR: tentativa incerta, edição bloqueada, recuperação, substituição e revogação
+OK IHFR: tentativa incerta, edição bloqueada, recuperação, substituição e revogação
+RUN Mapa: fallback, pontos sem localização e acesso às coletas existentes
+OK Mapa: fallback, pontos sem localização e acesso às coletas existentes
+RUN IHFR: insuficiência e versão incompatível preservam o vigente
+OK IHFR: insuficiência e versão incompatível preservam o vigente
+RUN Permissões OWNER, ADMIN contextual, MEMBER, global e laboratório inativo
+OK Permissões OWNER, ADMIN contextual, MEMBER, global e laboratório inativo
+RUN Administração: busca, paginação, diálogo por teclado, conflito, escrita e auditoria
+OK Administração: busca, paginação, diálogo por teclado, conflito, escrita e auditoria
+RUN Estados vazios, limite, falha de leitura, logout e cadastro demonstrativo
+OK Estados vazios, limite, falha de leitura, logout e cadastro demonstrativo
+RUN 375px, 768px e 1440px: páginas principais sem rolagem horizontal
+OK 375px, 768px e 1440px: páginas principais sem rolagem horizontal
+RUN Zoom 200%, foco, diálogos e contraste dos tokens
+OK Zoom 200%, foco, diálogos e contraste dos tokens

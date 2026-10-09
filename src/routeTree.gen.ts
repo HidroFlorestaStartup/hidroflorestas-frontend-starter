@@ -10,10 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LogoutRouteImport } from './routes/logout'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as WorkspaceRouteImport } from './routes/workspace'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminUsersRouteImport } from './routes/admin.users'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
 import { Route as DashboardCollectsRouteImport } from './routes/dashboard.collects'
 import { Route as DashboardAdminUsersRouteImport } from './routes/dashboard.admin.users'
@@ -32,6 +35,11 @@ import { Route as DashboardLaboratoriesLaboratoryIdAreasAreaIdCollectionsCollect
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -53,6 +61,16 @@ const WorkspaceRoute = WorkspaceRouteImport.update({
   id: '/workspace',
   path: '/workspace',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersRoute = AdminUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => AdminRoute,
 } as any)
 const DashboardIndexRoute = DashboardIndexRouteImport.update({
   id: '/dashboard/',
@@ -144,11 +162,14 @@ const DashboardLaboratoriesLaboratoryIdAreasAreaIdCollectionsCollectionIdEnviron
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
   '/logout': typeof LogoutRoute
   '/register': typeof RegisterRoute
   '/workspace': typeof WorkspaceRoute
+  '/admin/users': typeof AdminUsersRoute
   '/dashboard/collects': typeof DashboardCollectsRoute
+  '/admin/': typeof AdminIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/dashboard/admin/users': typeof DashboardAdminUsersRoute
   '/dashboard/laboratories/$laboratoryId': typeof DashboardLaboratoriesLaboratoryIdRouteWithChildren
@@ -169,7 +190,9 @@ export interface FileRoutesByTo {
   '/logout': typeof LogoutRoute
   '/register': typeof RegisterRoute
   '/workspace': typeof WorkspaceRoute
+  '/admin/users': typeof AdminUsersRoute
   '/dashboard/collects': typeof DashboardCollectsRoute
+  '/admin': typeof AdminIndexRoute
   '/dashboard': typeof DashboardIndexRoute
   '/dashboard/admin/users': typeof DashboardAdminUsersRoute
   '/dashboard/laboratories/$laboratoryId/map': typeof DashboardLaboratoriesLaboratoryIdMapRoute
@@ -186,11 +209,14 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
   '/logout': typeof LogoutRoute
   '/register': typeof RegisterRoute
   '/workspace': typeof WorkspaceRoute
+  '/admin/users': typeof AdminUsersRoute
   '/dashboard/collects': typeof DashboardCollectsRoute
+  '/admin/': typeof AdminIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/dashboard/admin/users': typeof DashboardAdminUsersRoute
   '/dashboard/laboratories/$laboratoryId': typeof DashboardLaboratoriesLaboratoryIdRouteWithChildren
@@ -209,11 +235,14 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/admin'
     | '/login'
     | '/logout'
     | '/register'
     | '/workspace'
+    | '/admin/users'
     | '/dashboard/collects'
+    | '/admin/'
     | '/dashboard/'
     | '/dashboard/admin/users'
     | '/dashboard/laboratories/$laboratoryId'
@@ -234,7 +263,9 @@ export interface FileRouteTypes {
     | '/logout'
     | '/register'
     | '/workspace'
+    | '/admin/users'
     | '/dashboard/collects'
+    | '/admin'
     | '/dashboard'
     | '/dashboard/admin/users'
     | '/dashboard/laboratories/$laboratoryId/map'
@@ -250,11 +281,14 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/admin'
     | '/login'
     | '/logout'
     | '/register'
     | '/workspace'
+    | '/admin/users'
     | '/dashboard/collects'
+    | '/admin/'
     | '/dashboard/'
     | '/dashboard/admin/users'
     | '/dashboard/laboratories/$laboratoryId'
@@ -272,6 +306,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRouteWithChildren
   LoginRoute: typeof LoginRoute
   LogoutRoute: typeof LogoutRoute
   RegisterRoute: typeof RegisterRoute
@@ -289,6 +324,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -318,6 +360,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/workspace'
       preLoaderRoute: typeof WorkspaceRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users': {
+      id: '/admin/users'
+      path: '/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminUsersRouteImport
+      parentRoute: typeof AdminRoute
     }
     '/dashboard/': {
       id: '/dashboard/'
@@ -420,6 +476,18 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AdminRouteChildren {
+  AdminUsersRoute: typeof AdminUsersRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminUsersRoute: AdminUsersRoute,
+  AdminIndexRoute: AdminIndexRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+
 interface DashboardLaboratoriesLaboratoryIdRouteChildren {
   DashboardLaboratoriesLaboratoryIdMapRoute: typeof DashboardLaboratoriesLaboratoryIdMapRoute
   DashboardLaboratoriesLaboratoryIdMembersRoute: typeof DashboardLaboratoriesLaboratoryIdMembersRoute
@@ -464,6 +532,7 @@ const DashboardLaboratoriesLaboratoryIdRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRouteWithChildren,
   LoginRoute: LoginRoute,
   LogoutRoute: LogoutRoute,
   RegisterRoute: RegisterRoute,

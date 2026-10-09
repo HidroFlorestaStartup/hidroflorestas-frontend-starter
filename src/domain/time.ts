@@ -42,8 +42,12 @@ export function parseWall({ date, time }: LocalParts): Wall | null {
   const dm = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
   const tm = /^(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{1,3}))?)?$/.exec(time);
   if (!dm || !tm) return null;
-  const y = +dm[1], mo = +dm[2], d = +dm[3];
-  const h = +tm[1], mi = +tm[2], s = tm[3] ? +tm[3] : 0;
+  const y = Number(dm[1]),
+    mo = Number(dm[2]),
+    d = Number(dm[3]);
+  const h = Number(tm[1]),
+    mi = Number(tm[2]),
+    s = tm[3] ? +tm[3] : 0;
   const msText = tm[4] ?? "";
   const ms = msText ? Number(msText.padEnd(3, "0")) : 0;
   if (mo < 1 || mo > 12 || d < 1 || h > 23 || mi > 59 || s > 59) return null;
@@ -67,8 +71,8 @@ export function buildRfc3339(parts: LocalParts, offset: string): string | null {
 export function rfcToEpoch(rfc: string): number | null {
   const m = /^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?)(Z|[+-]\d{2}:\d{2})$/.exec(rfc);
   if (!m) return null;
-  const w = parseWall({ date: m[1], time: m[2] });
-  const off = parseOffset(m[3]);
+  const w = parseWall({ date: m[1]!, time: m[2]! });
+  const off = parseOffset(m[3]!);
   if (!w || off === null) return null;
   return wallAsUtc(w) - off * 60000;
 }
@@ -99,7 +103,14 @@ export function offsetAt(epoch: number, timeZone: string): number {
     second: "2-digit",
   });
   const p = Object.fromEntries(f.formatToParts(new Date(epoch)).map((x) => [x.type, x.value]));
-  const asUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute, +p.second);
+  const asUtc = Date.UTC(
+    Number(p["year"]),
+    Number(p["month"]) - 1,
+    Number(p["day"]),
+    Number(p["hour"]),
+    Number(p["minute"]),
+    Number(p["second"]),
+  );
   return Math.round((asUtc - Math.floor(epoch / 1000) * 1000) / 60000);
 }
 
@@ -112,15 +123,24 @@ export function offsetAt(epoch: number, timeZone: string): number {
 export function resolveZoned(
   parts: LocalParts,
   timeZone: string,
-): { kind: "ok"; offset: string } | { kind: "gap" } | { kind: "ambiguous"; offsets: string[] } | { kind: "invalid" } {
+):
+  | { kind: "ok"; offset: string }
+  | { kind: "gap" }
+  | { kind: "ambiguous"; offsets: string[] }
+  | { kind: "invalid" } {
   const w = parseWall(parts);
   if (!w) return { kind: "invalid" };
   const base = wallAsUtc(w);
-  const cands = new Set([offsetAt(base - 86400000, timeZone), offsetAt(base + 86400000, timeZone), offsetAt(base, timeZone)]);
+  const cands = new Set([
+    offsetAt(base - 86400000, timeZone),
+    offsetAt(base + 86400000, timeZone),
+    offsetAt(base, timeZone),
+  ]);
   const valid = [...cands].filter((o) => offsetAt(base - o * 60000, timeZone) === o);
   if (valid.length === 0) return { kind: "gap" };
-  if (valid.length > 1) return { kind: "ambiguous", offsets: valid.sort((a, b) => b - a).map(formatOffset) };
-  return { kind: "ok", offset: formatOffset(valid[0]) };
+  if (valid.length > 1)
+    return { kind: "ambiguous", offsets: valid.sort((a, b) => b - a).map(formatOffset) };
+  return { kind: "ok", offset: formatOffset(valid[0]!) };
 }
 
 /** Partes locais do dispositivo para o momento atual (inicialização única). */

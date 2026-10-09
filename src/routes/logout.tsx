@@ -48,15 +48,29 @@ function Logout() {
       <div className="w-full max-w-md rounded-[20px] bg-card p-8 text-center shadow-[var(--shadow-card)]">
         <Brand className="text-xl" />
         {state === "pending" ? (
-          <p role="status" className="mt-6 flex items-center justify-center gap-2 text-muted-foreground"><Loader2 className="h-5 w-5 animate-spin" aria-hidden /> Encerrando sessão…</p>
+          <p
+            role="status"
+            className="mt-6 flex items-center justify-center gap-2 text-muted-foreground"
+          >
+            <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> Encerrando sessão…
+          </p>
         ) : (
           <div className="mt-6 space-y-4">
-            <Notice tone="danger" role="alert">Não foi possível encerrar a sessão. Você continua conectado.</Notice>
+            <Notice tone="danger" role="alert">
+              Não foi possível encerrar a sessão. Você continua conectado.
+            </Notice>
             <div className="flex flex-wrap justify-center gap-2">
               <Button onClick={run}>Tentar novamente</Button>
-              <Button variant="outline" onClick={() => router.history.back()}>Voltar</Button>
+              <Button variant="outline" onClick={() => router.history.back()}>
+                Voltar
+              </Button>
             </div>
-            <Link to="/workspace" className="block text-sm text-water-strong underline">Ir ao workspace</Link>
+            <Link
+              to="/workspace"
+              className="block min-h-11 content-center text-sm text-water-strong underline"
+            >
+              Ir ao workspace
+            </Link>
           </div>
         )}
       </div>

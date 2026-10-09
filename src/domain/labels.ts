@@ -118,17 +118,23 @@ export const dataQualityLabel: Record<DataQuality, string> = {
 export const insufficiencyLabel: Record<InsufficiencyReason, string> = {
   MISSING_ENVIRONMENTAL_DATA: "Não há conjunto de dados ambientais confirmado para esta coleta.",
   MISSING_SLOPE_PERCENT: "A declividade (%) não foi informada nos dados ambientais confirmados.",
-  MISSING_LAND_USE_TYPE: "O uso predominante da terra não foi informado (indeterminado ou ausente).",
+  MISSING_LAND_USE_TYPE:
+    "O uso predominante da terra não foi informado (indeterminado ou ausente).",
   INSUFFICIENT_DIMENSION:
     "Alguma dimensão (Água, Solo, Vegetação ou Território) não tem ao menos dois scores disponíveis.",
 };
 export const componentLabel = { W: "Água", S: "Solo", V: "Vegetação", T: "Território" } as const;
 
 export const fmtDecimal = (n: number, digits?: number) =>
-  n.toLocaleString("pt-BR", digits === undefined ? { maximumFractionDigits: 6 } : {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: digits,
-  });
+  n.toLocaleString(
+    "pt-BR",
+    digits === undefined
+      ? { maximumFractionDigits: 6 }
+      : {
+          minimumFractionDigits: digits,
+          maximumFractionDigits: digits,
+        },
+  );
 
 export const fmtDate = (iso: string) =>
   new Date(iso).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });

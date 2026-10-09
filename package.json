@@ -1,5 +1,5 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "hidroflorestas-frontend-starter",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -7,11 +7,15 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "preview": "nitro preview",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "test:browser": "node scripts/validate-demo.mjs",
+    "build:local": "NITRO_PRESET=node-server vite build",
+    "test:keyboard": "node scripts/validate-mobile-keyboard.mjs"
   },
   "overrides": {
     "rolldown": "1.2.1"
@@ -90,10 +94,15 @@
     "globals": "^15.15.0",
     "jsdom": "^20.0.3",
     "nitro": "3.0.260603-beta",
+    "playwright-core": "1.61.1",
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "8.1.5",
     "vitest": "^4.1.10"
+  },
+  "packageManager": "bun@1.3.11",
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

@@ -1,0 +1,249 @@
+{
+  "checks": [
+    "Acesso, validação e seleção explícita de laboratório",
+    "Área: validação, UF livre, geolocalização tardia, revisão e consulta",
+    "Coleta: offset manual, milissegundos, correção e confirmação",
+    "Medições: null, zero, false, declividade 150%, revisão e falha recuperável",
+    "IHFR: tentativa incerta, edição bloqueada, recuperação, substituição e revogação",
+    "Mapa: fallback, pontos sem localização e acesso às coletas existentes",
+    "IHFR: insuficiência e versão incompatível preservam o vigente",
+    "Permissões OWNER, ADMIN contextual, MEMBER, global e laboratório inativo",
+    "Administração: busca, paginação, diálogo por teclado, conflito, escrita e auditoria",
+    "Estados vazios, limite, falha de leitura, logout e cadastro demonstrativo",
+    "375px, 768px e 1440px: páginas principais sem rolagem horizontal",
+    "Zoom 200%, foco, diálogos e contraste dos tokens"
+  ],
+  "viewportChecks": [
+    {
+      "label": "landing-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "login-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "cadastro-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "workspace-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "laboratorio-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "nova-area-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "mapa-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "ihfr-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "ambiental-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "landing-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "login-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "cadastro-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "workspace-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "laboratorio-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "nova-area-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "mapa-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "ihfr-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "ambiental-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "landing-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "login-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "cadastro-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "workspace-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "laboratorio-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "nova-area-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "mapa-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "ihfr-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "ambiental-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "admin-375",
+      "width": 375,
+      "document": 375
+    },
+    {
+      "label": "admin-768",
+      "width": 768,
+      "document": 768
+    },
+    {
+      "label": "admin-1440",
+      "width": 1440,
+      "document": 1440
+    },
+    {
+      "label": "zoom-200-admin",
+      "width": 720,
+      "document": 720
+    },
+    {
+      "label": "zoom-200-dialogo",
+      "width": 720,
+      "document": 720
+    },
+    {
+      "label": "zoom-css-200-admin",
+      "width": 1440,
+      "document": 1440
+    }
+  ],
+  "errors": [],
+  "contrasts": [
+    {
+      "token": "--foreground",
+      "rgb": [
+        63,
+        63,
+        63
+      ],
+      "ratio": 10.53090124643501
+    },
+    {
+      "token": "--muted-foreground",
+      "rgb": [
+        96,
+        96,
+        96
+      ],
+      "ratio": 6.288529680665899
+    },
+    {
+      "token": "--primary",
+      "rgb": [
+        0,
+        130,
+        54
+      ],
+      "ratio": 4.945457412311979
+    },
+    {
+      "token": "--water-strong",
+      "rgb": [
+        0,
+        98,
+        177
+      ],
+      "ratio": 6.2094574965643705
+    },
+    {
+      "token": "--ochre",
+      "rgb": [
+        187,
+        77,
+        0
+      ],
+      "ratio": 5.030530556917215
+    },
+    {
+      "token": "--ochre-signup",
+      "rgb": [
+        154,
+        96,
+        0
+      ],
+      "ratio": 5.188832285016414
+    },
+    {
+      "token": "--destructive",
+      "rgb": [
+        193,
+        0,
+        7
+      ],
+      "ratio": 6.420920075570489
+    }
+  ]
+}

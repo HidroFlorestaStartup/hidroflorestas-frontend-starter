@@ -9,12 +9,19 @@ export const Route = createFileRoute("/dashboard/laboratories/$laboratoryId")({
 });
 
 function LabLayout() {
-  return <AppShell><LabGate /></AppShell>;
+  return (
+    <AppShell>
+      <LabGate />
+    </AppShell>
+  );
 }
 
 function LabGate() {
   const { laboratoryId } = Route.useParams();
-  const q = useQuery({ queryKey: ["lab", laboratoryId], queryFn: () => api.getLaboratory(laboratoryId) });
+  const q = useQuery({
+    queryKey: ["lab", laboratoryId],
+    queryFn: () => api.getLaboratory(laboratoryId),
+  });
   if (q.isPending) return <LoadingState label="Carregando laboratório…" />;
   if (q.isError) return <ErrorState error={q.error} onRetry={() => q.refetch()} />;
   return (

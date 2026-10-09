@@ -1,0 +1,10 @@
+[
+  {
+    "path": "/admin",
+    "content": "Administração\n\nVisão geral das contas da plataforma.\n\nGerenciar contas\n\nTotal de contas\n\n12\n\nAtiva\n\n9\n\nPendente\n\n1\n\nInativa\n\n1\n\nBloqueada\n\n1"
+  },
+  {
+    "path": "/admin/users",
+    "content": "Administração\n\nVisão geral das contas da plataforma.\n\nGerenciar contas\n\nTotal de contas\n\n12\n\nAtiva\n\n9\n\nPendente\n\n1\n\nInativa\n\n1\n\nBloqueada\n\n1"
+  }
+]

@@ -26,12 +26,21 @@ describe("occurredAt", () => {
     expect(toUtcIso(buildRfc3339(parts, "+05:45")!)).toBe("2026-10-01T08:50:20.125Z");
   });
   it("preserva segundos ausentes como :00 e rejeita datas irreais", () => {
-    expect(buildRfc3339({ date: "2026-10-01", time: "08:00" }, "-03:00")).toBe("2026-10-01T08:00:00-03:00");
+    expect(buildRfc3339({ date: "2026-10-01", time: "08:00" }, "-03:00")).toBe(
+      "2026-10-01T08:00:00-03:00",
+    );
     expect(buildRfc3339({ date: "2026-02-30", time: "08:00" }, "-03:00")).toBeNull();
   });
   it("detecta hora inexistente e repetida", () => {
-    expect(resolveZoned({ date: "2026-03-08", time: "02:30" }, "America/New_York").kind).toBe("gap");
-    expect(resolveZoned({ date: "2026-11-01", time: "01:30" }, "America/New_York").kind).toBe("ambiguous");
-    expect(resolveZoned({ date: "2026-10-01", time: "10:00" }, "America/Fortaleza")).toEqual({ kind: "ok", offset: "-03:00" });
+    expect(resolveZoned({ date: "2026-03-08", time: "02:30" }, "America/New_York").kind).toBe(
+      "gap",
+    );
+    expect(resolveZoned({ date: "2026-11-01", time: "01:30" }, "America/New_York").kind).toBe(
+      "ambiguous",
+    );
+    expect(resolveZoned({ date: "2026-10-01", time: "10:00" }, "America/Fortaleza")).toEqual({
+      kind: "ok",
+      offset: "-03:00",
+    });
   });
 });

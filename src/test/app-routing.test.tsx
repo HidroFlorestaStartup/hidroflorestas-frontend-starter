@@ -1,8 +1,16 @@
+import type { ReactNode } from "react";
 import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter, RouterProvider } from "@tanstack/react-router";
 import { cleanup, render, waitFor } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
+vi.mock("@/routes/__root", async (importOriginal) => {
+  const module = await importOriginal<typeof import("@/routes/__root")>();
+  Object.assign(module.Route.options, {
+    shellComponent: ({ children }: { children: ReactNode }) => <>{children}</>,
+  });
+  return module;
+});
 import { routeTree } from "@/routeTree.gen";
 
 function renderAt(path: string) {
@@ -24,16 +32,16 @@ afterEach(() => {
 // routes are rewritten as the app is built and this must keep passing.
 describe("App routing", () => {
   it("renders the index route", async () => {
-    const { container } = renderAt("/");
+    renderAt("/");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    await waitFor(() => expect(document.querySelector("h1")).not.toBeNull());
   });
 
   it("renders the not-found route", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
-    const { container } = renderAt("/this-route-does-not-exist");
+    renderAt("/this-route-does-not-exist");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    await waitFor(() => expect(document.querySelector("h1")).not.toBeNull());
   });
 });

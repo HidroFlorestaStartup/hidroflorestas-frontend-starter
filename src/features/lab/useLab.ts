@@ -3,7 +3,8 @@ import { api } from "@/adapter";
 
 /** Contexto do laboratório já carregado pelo layout. */
 export function useLabContext(labId: string) {
-  return useQuery({ queryKey: ["lab", labId], queryFn: () => api.getLaboratory(labId) }).data?.context;
+  return useQuery({ queryKey: ["lab", labId], queryFn: () => api.getLaboratory(labId) }).data
+    ?.context;
 }
 
 export const labHead = (title: string, description: string) => () => ({
