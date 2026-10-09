@@ -1,0 +1,57 @@
+[
+  {
+    "check": "install",
+    "exitCode": 0,
+    "command": "install --frozen-lockfile",
+    "log": "execucoes/install.txt"
+  },
+  {
+    "check": "build",
+    "exitCode": 0,
+    "command": "node_modules/vite/bin/vite.js build",
+    "log": "execucoes/build.txt"
+  },
+  {
+    "check": "typecheck",
+    "exitCode": 0,
+    "command": "node_modules/typescript/bin/tsc --noEmit",
+    "log": "execucoes/typecheck.txt"
+  },
+  {
+    "check": "lint",
+    "exitCode": 0,
+    "command": "node_modules/eslint/bin/eslint.js .",
+    "log": "execucoes/lint.txt"
+  },
+  {
+    "check": "test",
+    "exitCode": 0,
+    "command": "node_modules/vitest/vitest.mjs run",
+    "log": "execucoes/test.txt"
+  },
+  {
+    "check": "build:local",
+    "exitCode": 0,
+    "command": "node_modules/vite/bin/vite.js build",
+    "log": "execucoes/build-local.txt",
+    "environment": {
+      "NITRO_PRESET": "node-server"
+    }
+  },
+  {
+    "check": "test:browser",
+    "exitCode": 0,
+    "groups": 12,
+    "viewportChecks": 33,
+    "runtimeErrors": 0,
+    "preview": "Nitro / Node SSR",
+    "log": "execucoes/test-browser.txt"
+  },
+  {
+    "check": "test:keyboard",
+    "exitCode": 0,
+    "controls": 48,
+    "covered": 0,
+    "log": "execucoes/test-keyboard.txt"
+  }
+]

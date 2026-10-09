@@ -1,0 +1,482 @@
+[
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "Nome da área monitorada *",
+    "top": 485,
+    "bottom": 529,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "Latitude *",
+    "top": 593,
+    "bottom": 637,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "Longitude *",
+    "top": 701,
+    "bottom": 745,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "BUTTON",
+    "name": "Usar localização do dispositivo",
+    "top": 761,
+    "bottom": 805,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "Município — opcional",
+    "top": 428,
+    "bottom": 472,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "UF — opcional",
+    "top": 536,
+    "bottom": 580,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "INPUT",
+    "name": "Tipo de terreno — opcional",
+    "top": 660,
+    "bottom": 704,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "TEXTAREA",
+    "name": "Descrição — opcional",
+    "top": 393,
+    "bottom": 507,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "A",
+    "name": "Zoom in",
+    "top": 253,
+    "bottom": 297,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "A",
+    "name": "Zoom out",
+    "top": 297,
+    "bottom": 341,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "A",
+    "name": "Leaflet",
+    "top": 643.203125,
+    "bottom": 657.203125,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "A",
+    "name": "OpenStreetMap",
+    "top": 643.203125,
+    "bottom": 657.203125,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "A",
+    "name": "Cancelar",
+    "top": 752,
+    "bottom": 796,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/new",
+    "tag": "BUTTON",
+    "name": "Revisar",
+    "top": 752,
+    "bottom": 796,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Data *",
+    "top": 577,
+    "bottom": 621,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Data *",
+    "top": 577,
+    "bottom": 621,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Data *",
+    "top": 577,
+    "bottom": 621,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Data *",
+    "top": 577,
+    "bottom": 621,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": "Hora *",
+    "top": 685,
+    "bottom": 729,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "INPUT",
+    "name": " Fuso do dispositivo (America/Fortaleza, UTC-03:00)",
+    "top": 797,
+    "bottom": 817,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/new",
+    "tag": "BUTTON",
+    "name": "Revisar",
+    "top": 708,
+    "bottom": 752,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Fonte de água *",
+    "top": 478,
+    "bottom": 522,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Há nascente *",
+    "top": 564,
+    "bottom": 608,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Profundidade do poço (m) — opcional",
+    "top": 672,
+    "bottom": 716,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Disponibilidade hídrica *",
+    "top": 758,
+    "bottom": 802,
+    "headerBottom": 207,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Indicador de salinidade — opcional",
+    "top": 428,
+    "bottom": 472,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SUMMARY",
+    "name": "Solo",
+    "top": 510,
+    "bottom": 558,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Textura do solo *",
+    "top": 604,
+    "bottom": 648,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Taxa de infiltração (mm/h) *",
+    "top": 712,
+    "bottom": 756,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Compactação *",
+    "top": 428,
+    "bottom": 472,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Sinais de erosão *",
+    "top": 514,
+    "bottom": 558,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Solo exposto (%) — opcional",
+    "top": 622,
+    "bottom": 666,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SUMMARY",
+    "name": "Vegetação",
+    "top": 704,
+    "bottom": 752,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Cobertura vegetal (%) *",
+    "top": 428,
+    "bottom": 472,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Fragmentação *",
+    "top": 514,
+    "bottom": 558,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Presença de APP ripária — opcional",
+    "top": 600,
+    "bottom": 644,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SELECT",
+    "name": "Degradação da paisagem *",
+    "top": 686,
+    "bottom": 730,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "SUMMARY",
+    "name": "Terreno",
+    "top": 768,
+    "bottom": 816,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Densidade de drenagem (km/km²) — opcional",
+    "top": 428,
+    "bottom": 472,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Elevação (m) — opcional",
+    "top": 536,
+    "bottom": 580,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "INPUT",
+    "name": "Declividade (%) — opcional",
+    "top": 660,
+    "bottom": 704,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "A",
+    "name": "Cancelar",
+    "top": 728,
+    "bottom": 772,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  },
+  {
+    "path": "/dashboard/laboratories/lab-itapecuru/areas/area-beira-rio/collections/col-br-3/environmental-data/new",
+    "tag": "BUTTON",
+    "name": "Revisar os quatro grupos",
+    "top": 728,
+    "bottom": 772,
+    "headerBottom": 146,
+    "footerTop": 835,
+    "covered": false
+  }
+]
