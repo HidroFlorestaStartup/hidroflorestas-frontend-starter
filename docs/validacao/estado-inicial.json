@@ -1,0 +1,34 @@
+{
+  "hidroflorestas-frontend-starter": {
+    "path": "/home/pedrovitor237/Documents/Projects/ForkedHF/hidroflorestas-frontend-starter",
+    "initialBranch": "main",
+    "initialSha": "8984bb80a29973c05a5830cb624c60df6ed5d575",
+    "remotes": "origin\thttps://github.com/HidroFlorestaStartup/hidroflorestas-frontend-starter.git (fetch)\norigin\thttps://github.com/HidroFlorestaStartup/hidroflorestas-frontend-starter.git (push)",
+    "initialStatus": "",
+    "currentStatus": "Importação em andamento"
+  },
+  "HidroFlorestas-FrontEnd": {
+    "path": "/home/pedrovitor237/Documents/Projects/ForkedHF/HidroFlorestas-FrontEnd",
+    "initialBranch": "main",
+    "initialSha": "3f55b94fc0989ad45a48b711162e07104912b3b6",
+    "remotes": "origin\thttps://github.com/PedroVitor237/HidroFlorestas-FrontEnd.git (fetch)\norigin\thttps://github.com/PedroVitor237/HidroFlorestas-FrontEnd.git (push)",
+    "initialStatus": "",
+    "currentStatus": ""
+  },
+  "screenshot-show-off-18": {
+    "path": "/home/pedrovitor237/Documents/Projects/ForkedHF/screenshot-show-off-18",
+    "initialBranch": "main",
+    "initialSha": "4541c618442ac16a790be322c944cabbf80d2b31",
+    "remotes": "origin\thttps://github.com/PedroVitor237/screenshot-show-off-18.git (fetch)\norigin\thttps://github.com/PedroVitor237/screenshot-show-off-18.git (push)",
+    "initialStatus": "",
+    "currentStatus": ""
+  },
+  "HidroFlorestas-FullStack": {
+    "path": "/home/pedrovitor237/Documents/Projects/ForkedHF/HidroFlorestas-FullStack",
+    "initialBranch": "development",
+    "initialSha": "beba96fbf6bbaac8771dbb29abea2f9f8f5b0054",
+    "remotes": "origin\thttps://github.com/HidroFlorestaStartup/HidroFlorestas-FullStack.git (fetch)\norigin\thttps://github.com/HidroFlorestaStartup/HidroFlorestas-FullStack.git (push)\nupstream\thttps://github.com/PedroVitor237/HidroFlorestas.git (fetch)\nupstream\thttps://github.com/PedroVitor237/HidroFlorestas.git (push)",
+    "initialStatus": "",
+    "currentStatus": ""
+  }
+}
