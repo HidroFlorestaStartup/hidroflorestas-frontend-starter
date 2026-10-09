@@ -29,6 +29,7 @@ function Login() {
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [demoSelection, setDemoSelection] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
   const qc = useQueryClient();
@@ -79,7 +80,10 @@ function Login() {
               autoComplete="email"
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setDemoSelection(null);
+              }}
               error={errors.email}
             />
             <div className="relative">
@@ -89,7 +93,10 @@ function Login() {
                 autoComplete="current-password"
                 required
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setDemoSelection(null);
+                }}
                 error={errors.password}
                 className="w-full min-h-11 rounded-[10px] border border-input bg-secondary py-2 pl-3 pr-12 text-base aria-[invalid=true]:border-destructive"
               />
@@ -121,17 +128,30 @@ function Login() {
         <div className="rounded-[20px] border border-dashed border-ochre/60 bg-card p-4 text-sm">
           <DemoTag />
           <p className="mt-2 text-muted-foreground">
-            Contas fictícias: use qualquer senha não vazia.
+            Selecione uma conta para preencher o e-mail e a senha de demonstração. Depois, clique em
+            Entrar para iniciar a sessão. Você também pode usar qualquer senha não vazia com estes
+            e-mails fictícios.
+          </p>
+          <p role="status" className="mt-2 text-muted-foreground">
+            {!hydrated
+              ? "Carregando contas de demonstração…"
+              : demoSelection
+                ? `${demoSelection}: e-mail e senha preenchidos. Clique em Entrar para iniciar a sessão.`
+                : "Contas de demonstração prontas para selecionar."}
           </p>
           <ul className="mt-2 space-y-1">
             {demoPersonas.map((p) => (
               <li key={p.id}>
                 <button
                   type="button"
-                  className="min-h-11 text-left text-water-strong underline underline-offset-2"
+                  disabled={!hydrated || busy}
+                  className="min-h-11 text-left text-water-strong underline underline-offset-2 disabled:cursor-wait disabled:opacity-60"
                   onClick={() => {
                     setEmail(p.email);
                     setPassword("demo");
+                    setErrors({});
+                    setFormError(null);
+                    setDemoSelection(p.label);
                   }}
                 >
                   {p.label}
